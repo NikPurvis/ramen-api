@@ -1,4 +1,4 @@
-const mongoose = require('mongoose')
+const mongoose = require("mongoose")
 
 const ramenSchema = new mongoose.Schema(
 	{
@@ -16,7 +16,7 @@ const ramenSchema = new mongoose.Schema(
 		},
         owner: {
 			type: mongoose.Schema.Types.ObjectId,
-			ref: 'User',
+			ref: "User",
 			required: true,
 		},
 	},
@@ -25,4 +25,4 @@ const ramenSchema = new mongoose.Schema(
 	}
 )
 
-module.exports = mongoose.model('Ramen', ramenSchema)
+module.exports = mongoose.model("Ramen", ramenSchema)

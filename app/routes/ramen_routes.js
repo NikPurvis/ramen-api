@@ -29,7 +29,7 @@ const router = express.Router()
 
 // INDEX
 // GET /ramen
-router.get("/ramen", requireToken, (req, res, next) => {
+router.get("/ramen", (req, res, next) => {
 	Ramen.find()
 		.then((ramen) => {
 			// `ramen` will be an array of Mongoose documents
@@ -45,7 +45,7 @@ router.get("/ramen", requireToken, (req, res, next) => {
 
 // SHOW
 // GET /ramen/5a7db6c74d55bc51bdf39793
-router.get("/ramen/:id", requireToken, (req, res, next) => {
+router.get("/ramen/:id", (req, res, next) => {
 	// req.params.id will be set based on the `:id` in the route
 	Ramen.findById(req.params.id)
 		.then(handle404)
@@ -63,7 +63,7 @@ router.post("/ramen", requireToken, (req, res, next) => {
 
 	Ramen.create(req.body.ramen)
 		// respond to succesful `create` with status 201 and JSON of new "ramen"
-		.then((ramen) => {
+		.then(ramen => {
 			res.status(201).json({ ramen: ramen.toObject() })
 		})
 		// if an error occurs, pass it off to our error handler

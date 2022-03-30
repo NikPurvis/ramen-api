@@ -1,6 +1,8 @@
 const mongoose = require("mongoose")
 
-const ramenSchema = new mongoose.Schema(
+const { Schema, model } = mongoose
+
+const ramenSchema = new Schema(
 	{
 		flavor: {
 			type: String,
@@ -14,8 +16,12 @@ const ramenSchema = new mongoose.Schema(
 			type: Number,
 			required: true,
 		},
+		haveTried: {
+			type: Boolean,
+			required: true,
+		},
         owner: {
-			type: mongoose.Schema.Types.ObjectId,
+			type: Schema.Types.ObjectId,
 			ref: "User",
 			required: true,
 		},
@@ -25,4 +31,4 @@ const ramenSchema = new mongoose.Schema(
 	}
 )
 
-module.exports = mongoose.model("Ramen", ramenSchema)
+module.exports = model("Ramen", ramenSchema)

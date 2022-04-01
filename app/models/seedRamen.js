@@ -9,13 +9,55 @@ const Ramen = require("./ramen")
 const db = require("../../config/db")
 
 const starterRamen = [
-    { flavor: "Chicken", description: "Not your ordinary chicken noodle soup.", sodium: 1660, haveTried: true },
-    { flavor: "Creamy Chicken", description: "Ramen with extra soul.", sodium: 1220, haveTried: true },
-    { flavor: "Picante Chicken", description: "Feeling hot, hot, hot!", sodium: 1480, haveTried: true },
-    { flavor: "Beef", description: "Hearty goodness in every slurp.", sodium: 1580, haveTried: true },
-    { flavor: "Roast Beef", description: "Mouthwatering goodness you can't resist.", sodium: 1620, haveTried: false },
-    { flavor: "Shrimp", description: "A wave of seafood flavor in every bowl.", sodium: 1580, haveTried: true },
-    { flavor: "Lime Chili Shrimp", description: "There's nothing small about this shrimp flavor.", sodium: 1820, haveTried: false },
+    { flavor: "Chicken",
+        description: "Not your ordinary chicken noodle soup.",
+        sodium: 1660,
+        haveTried: true,
+        imageMain: "chicken1.png",
+        imageDetail: "chicken2.png"
+    },
+    { flavor: "Creamy Chicken",
+        description: "Ramen with extra soul.",
+        sodium: 1220,
+        haveTried: true,
+        imageMain: "creamychx1.png",
+        imageDetail: "creamychx2.png"
+    },
+    { flavor: "Picante Chicken",
+        description: "Feeling hot, hot, hot!",
+        sodium: 1480,
+        haveTried: true,
+        imageMain: "picantechx1.png",
+        imageDetail: "picantechx2.png"
+    },
+    { flavor: "Beef",
+        description: "Hearty goodness in every slurp.",
+        sodium: 1580,
+        haveTried: true,
+        imageMain: "beef1.png",
+        imageDetail: "beef2.png"
+    },
+    { flavor: "Roast Beef",
+        description: "Mouthwatering goodness you can't resist.",
+        sodium: 1620,
+        haveTried: false,
+        imageMain: "roastbeef1.png",
+        imageDetail: "roastbeef2.png"
+    },
+    { flavor: "Shrimp",
+        description: "A wave of seafood flavor in every bowl.",
+        sodium: 1580,
+        haveTried: true,
+        imageMain: "shrimp1.png",
+        imageDetail: "shrimp2.png"
+    },
+    { flavor: "Lime Chili Shrimp",
+        description: "There's nothing small about this shrimp flavor.",
+        sodium: 1820,
+        haveTried: false,
+        imageMain: "limechili1.png",
+        imageDetail: "limechili2.png"
+    },
 ]
 
 // 1. Connect to the database via Mongoose. (reference server.js)

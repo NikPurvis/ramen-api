@@ -20,6 +20,14 @@ const ramenSchema = new Schema(
 			type: Boolean,
 			required: true,
 		},
+		imageMain: {
+			type: String,
+			required: false,
+		},
+		imageDetail: {
+			type: String,
+			required: false,
+		},
         owner: {
 			type: Schema.Types.ObjectId,
 			ref: "User",

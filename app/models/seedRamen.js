@@ -55,8 +55,8 @@ const starterRamen = [
         description: "There's nothing small about this shrimp flavor.",
         sodium: 1820,
         haveTried: false,
-        imageMain: "limechili1.png",
-        imageDetail: "limechili2.png"
+        imageMain: "chilishrimp1.png",
+        imageDetail: "chilishrimp2.png"
     },
 ]
 
